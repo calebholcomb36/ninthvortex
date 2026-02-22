@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Attain a prize, if you must.</p>
+    <input type="text" id="password" placeholder="Futile attempt">
+    <button onclick="checkInput()">Try</button>
+
+    <p id="incorrect" style="color:red; display:none">You have not ascertained truth.</p>
+
+    <script>
+        function checkInput() {
+            <!-- clever boy, you are-->
+            password = "I am a poo poo head"
+            userInput = document.getElementById("password").value;
+
+            if (userInput.toLowerCase() == password.toLowerCase()) {
+                window.location.href = "stage2.html";
+            } else {
+                document.getElementById("incorrect").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
