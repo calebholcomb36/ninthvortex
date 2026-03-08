@@ -7,8 +7,8 @@
 </head>
 <body>
     <p><img src="/images/sun_of_none.jpg" alt="sun_of_none"></p>
-    <input type="text" id="password" placeholder="Futile attempt">
     <p>||Current payout if solved: [payout]</p>
+    <input type="text" id="password" placeholder="Attempt to solve">
     <button onclick="checkInput()">Try</button>
     <p id="incorrect" style="color:red; display:none">You have not ascertained truth.</p>
 
@@ -19,7 +19,7 @@
             userInput = document.getElementById("password").value;
 
             if (userInput.trim().toLowerCase() == password.toLowerCase()) {
-                window.location.href = "stage2.html";
+                window.location.href = "/puzzles/winner_page.html";
             } else {
                 document.getElementById("incorrect").style.display = "block";
             }
