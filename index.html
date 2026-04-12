@@ -28,6 +28,16 @@
             /*border: 3px solid rgb(255, 225, 0, 0.8);*/ 
         }
 
+        p.donate {
+            font-size: 12pt;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        button.truth {
+            text-align: right;
+        }
+
         a {
             text-decoration: none;
             font-size: 32px;
@@ -50,10 +60,17 @@
         }
     </style>
 </head>
-<body>
+<body id="falsehood">
+    <button class="truth" onclick="ascertain()">If you have the luxury of preferring that things make sense</button>
     <p class="dawns"><a href="writing/the_death_of_irrelevant.txt">Dawns I Have Beheld</a></p>
     <p class="moons"><a href="channels.html">They To Whom I Join</a></p> 
-    <p><a href="donate.html">Donate</a></p>
+    <p class="donate"><a href="donate.html">Donate</a></p>
+
+    <script>
+        function ascertain() {
+            document.getElementById("falsehood").textContent = "You have lost.";
+        }
+    </script>
 </body>
 
 </html>
