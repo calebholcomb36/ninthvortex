@@ -23,9 +23,17 @@
             font-size: 24pt;
             text-align: center;
             font-family: Courier, monospace;
-        } .sphinx a {
-            color: rgb(24, 0, 206);
+        } .moons a {
+            color: rgb(109, 109, 109);
             /*border: 3px solid rgb(255, 225, 0, 0.8);*/ 
+        }
+
+        p.stars {
+            font-size: 24pt;
+            text-align: center;
+            font-family: Courier, monospace;
+        } .stars a {
+            color: rgb(50, 100, 0);
         }
 
         p.donate {
@@ -64,20 +72,22 @@
     <button id="choice" class="truth" onclick="ascertain()">If you have become jaded</button>
     <p id="not" class="dawns"><a href="music.html">Dawns I Have Beheld</a></p>
     <p id="nor" class="moons"><a href="writing.html">They To Whom I Join</a></p> 
+    <p id="no" class="stars"><a href="puzzles.html">Knots Tied of Amber</a></p>
     <p id="none" class="donate"><a href="donate.html">Donate</a></p>
 
     <script>
         function ascertain() {
             document.getElementById("choice").outerHTML = "<button id='choice' class='truth' onclick='lie()'>If you have become overwhelmed</button>";
-            document.getElementById("not").innerHTML = '<a href="music/solomon_3.mp3">Music</a>';
-            document.getElementById("nor").innerHTML = '<a href="channels.html">Writing</a>';
-            document.getElementById("none").innerHTML = '<a href="donate.html">No Date</a>';
+            document.getElementById("not").innerHTML = '<a href="music.html">Music</a>';
+            document.getElementById("nor").innerHTML = '<a href="writing.html">Writing</a>';
+            document.getElementById("no").innerHTML = '<a href="puzzles.html">Puzzles</a>';
+            document.getElementById("none").innerHTML = '<a href="https://www.timeanddate.com/calendar/?year=1738&country=234">No, Date</a>';
         }
 
         function lie() {
             document.getElementById("choice").outerHTML = "<button id='choice' class='truth' onclick='ascertain()'>If you have become jaded</button>";
-            document.getElementById("not").innerHTML = "<a href='music/solomon_3.mp3'>Dawns I Have Beheld</a>";
-            document.getElementById("nor").innerHTML = '<a href="channels.html">They To Whom I Join</a>';
+            document.getElementById("not").innerHTML = "<a href='music.html'>Dawns I Have Beheld</a>";
+            document.getElementById("nor").innerHTML = '<a href="writing.html">They To Whom I Join</a>';
             document.getElementById("none").innerHTML = '<a href="donate.html">Donate</a>';
         }
     </script>
