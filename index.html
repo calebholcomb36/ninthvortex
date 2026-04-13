@@ -69,25 +69,26 @@
     </style>
 </head>
 <body id="falsehood">
-    <button id="choice" class="truth" onclick="ascertain()">If you have become jaded</button>
+    <button id="choice" class="truth" onclick="lie()">If you have become jaded</button>
     <p id="not" class="dawns"><a href="music.html">Dawns I Have Beheld</a></p>
     <p id="nor" class="moons"><a href="writing.html">They To Whom I Join</a></p> 
     <p id="no" class="stars"><a href="puzzles.html">Knots Tied of Amber</a></p>
     <p id="none" class="donate"><a href="donate.html">Donate</a></p>
 
     <script>
-        function ascertain() {
-            document.getElementById("choice").outerHTML = "<button id='choice' class='truth' onclick='lie()'>If you have become overwhelmed</button>";
+        function lie() {
+            document.getElementById("choice").outerHTML = "<button id='choice' class='truth' onclick='ascertain()'>If you have become overwhelmed</button>";
             document.getElementById("not").innerHTML = '<a href="music.html">Music</a>';
             document.getElementById("nor").innerHTML = '<a href="writing.html">Writing</a>';
             document.getElementById("no").innerHTML = '<a href="puzzles.html">Puzzles</a>';
             document.getElementById("none").innerHTML = '<a href="https://www.timeanddate.com/calendar/?year=1738&country=234">No, Date</a>';
         }
 
-        function lie() {
-            document.getElementById("choice").outerHTML = "<button id='choice' class='truth' onclick='ascertain()'>If you have become jaded</button>";
+        function ascertain() {
+            document.getElementById("choice").outerHTML = "<button id='choice' class='truth' onclick='lie()'>If you have become jaded</button>";
             document.getElementById("not").innerHTML = "<a href='music.html'>Dawns I Have Beheld</a>";
             document.getElementById("nor").innerHTML = '<a href="writing.html">They To Whom I Join</a>';
+            document.getElementById("no").innerHTML = '<a href="puzzles.html">Knots Tied of Amber</a>';
             document.getElementById("none").innerHTML = '<a href="donate.html">Donate</a>';
         }
     </script>
