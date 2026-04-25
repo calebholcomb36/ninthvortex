@@ -8,11 +8,17 @@
 <body>
     <p style="color: purple; font-size: 22pt; text-align: center;">You are here. Alive, unbroken, and untamed. The Fire burns within you.</p>
     <button style="display: block; margin: 0 auto;" onclick="sly()">Search for comfort in a seam's embrace</button><br>
-    <button style="display: block; margin: 0 auto;" onclick="noble()">Let it to serve its dreadful reminding purpose (Hann, 2026)</button>
+    <button style="display: block; margin: 0 auto;" onclick="noble()">Let it to serve its dreadful reminding purpose (Katherine Hann, 2026)</button>
+    <div id="wisdomDisplay"></div>
 
-    <script>
+    <script src="wisdom.js">
         function sly() {
+            addWisdom();
+            updateWindowDisplay();
             window.location.href = "choice_2.html";
+        }
+        function noble() {
+            window.location.href = "choice_3.html";
         }
     </script>
 </body>
