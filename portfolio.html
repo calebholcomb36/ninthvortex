@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/vortex.ico">
+    <title>Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-align: center;
+            font-family: Georgia, serif;
+            background: #fff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #ddd;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 700px;
+            margin: auto;
+            padding: 4rem 2rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 7rem;
+            scroll-margin-top: 5rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .work {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .piece {
+            border-top: 1px solid #ddd;
+            padding-top: 1rem;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            padding-top: 2rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+    <section id="about">
+        <h1 style="text-align: center;">Caleb Holcomb</h1>
+        <p>
+            Hello! I am a 22-year-old student, musician, and artist living in Corvallis, OR. 
+            I'm currently studying Computer Science, and dedicate virtually all of my free time 
+            to creativity of all forms, primarily songwriting. 
+        </p>
+        <!--<image src="images/headshot.jpeg" width="500"></image>-->
+    </section>
+
+    <section id="work">
+        <h1>Work</h1>
+
+        <div class="work">
+
+            <article class="piece">
+                <h2>The Mind</h2>
+                <p>I completed this song around the end of 2024. 
+                    It consists of three distinct musical ideas, and 
+                    is largely an experimental piece.</p>
+                <h3>Part 1</h3>
+                <p>December 2025</p>
+                <iframe width="600"
+                    src="https://youtu.be/CCG-sRRIs5g"
+                    title="Part 1"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+                <p>
+                    The first part of the project is a compilation of footage I shot in 
+                    Salem, Oregon and Yakutat, Alaska over a period of several months. 
+                    Editing was done in Davinci Resolve.
+                </p>
+                <h3>Part 2</h3>
+                <p>April 2026</p>
+                <video controls src="videos/themind_part2.mov" width = "600"></video>
+                <p>
+                    This was animated in Procreate and edited in Davinci Resolve. 
+                    It was my first attempt at hand-drawn, 2D animation. 
+                    Some video was shot by Connor Haskell.
+                </p>
+                <h3>Part 3</h3>
+                <p>May 2026</p>
+                <video controls src="videos/themind_part3.mov" width = "600"></video>
+                <p>
+                    This is an audio visualization I programmed in TouchDesigner. 
+                    It was made by seperating each musical part into its own 
+                    render pipeline, and compositing the result.
+                </p>
+            </article>
+
+            <article class="piece">
+                <h2>Anagram Oracle</h2>
+                <p>October 2025</p>
+                <video controls src="projects/anagram_oracle/second_sketch (10-23-2025).mkv" width = "600"></video>
+                <p>
+                    The Anagram Oracle was an idea I concieved in mid 2025. 
+                    It would consist of an immense, clock-like mechanism, 
+                    into which a spectator could enter their name. 
+                    The Oracle would then rearrange the name's letters 
+                    to provide a prophecy/statement regarding that 
+                    person's fate. This was a partial proof-of-concept,
+                    which reverses each word in a short poem to
+                    create an alternative poem.  
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>Email: calebholcomb36@gmail.com</p>
+
+        <footer>
+            © 2026 Caleb Holcomb
+        </footer>
+    </section>
+
+    </main>
+
+</body>
+</html>
